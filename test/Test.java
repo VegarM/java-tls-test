@@ -23,8 +23,8 @@ public class Test {
         System.out.println(u + " ok");
       }
     } catch (Exception e) {
-      System.out.println(u + " not ok");
       e.printStackTrace();
+      System.out.println(u + " not ok");
     }
   }
 }
