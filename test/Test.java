@@ -5,8 +5,8 @@ import java.net.URL;
 
 public class Test {
   public static void main(String[] args) throws Exception {
-    get("https://login.microsoftonline.com"); // get the crypto stuff initialized, seems to increase changes of the problem appearing
-    get("https://google.com"); // get the crypto stuff initialized, seems to increase changes of the problem appearing
+    get("https://login.microsoftonline.com");
+    get("https://google.com");
   }
 
   private static void get(String u) {
