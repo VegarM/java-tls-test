@@ -1,10 +1,14 @@
 #!/bin/bash
-echo building
+set -x
+
 javac test/Test.java
-echo Testing with TLS 1.2
-java -Dhttps.protocol="TLSv1.2" test.Test
-echo Testing with TLS 1.3
-java -Dhttps.protocol="TLSv1.3" test.Test
-echo Testing with default
 java test.Test
 
+# wget -v -O - https://google.com
+# wget -v -O - https://login.microsoftonline.com/NAVtestB2C.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1A_idporten_ver1
+
+# for v in 1 2 3; do
+#   java -Dhttps.protocols="TLSv1.${v}" test.Test
+# done
+
+# java -Djdk.tls.client.protocols="TLSv1,TLSv1.1,TLSv1.2" -Dhttps.protocols="TLSv1,TLSv1.1,TLSv1.2" -Djavax.net.debug="all" test.Test
